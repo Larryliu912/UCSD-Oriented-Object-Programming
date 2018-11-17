@@ -33,7 +33,7 @@ import parsing.ParseFeed;
 public class EarthquakeCityMap extends PApplet {
 
 	// You can ignore this.  It's to keep eclipse from generating a warning.
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 
 	// IF YOU ARE WORKING OFFLINE, change the value of this variable to true
 	private static final boolean offline = false;
@@ -43,6 +43,10 @@ public class EarthquakeCityMap extends PApplet {
 	// Less than this threshold is a minor earthquake
 	public static final float THRESHOLD_LIGHT = 4;
 
+    public final int yellow = color(255, 255, 0);
+    public final int red = color(255,0,0);
+    public final int blue = color(0, 0, 255);
+
 	/** This is where to find the local tiles, for working without an Internet connection */
 	public static String mbTilesString = "blankLight-1-3.mbtiles";
 	
@@ -51,8 +55,8 @@ public class EarthquakeCityMap extends PApplet {
 	
 	//feed with magnitude 2.5+ Earthquakes
 	private String earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.atom";
+	//private String earthquakesURL = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/atom.php";
 
-	
 	public void setup() {
 		size(950, 600, OPENGL);
 
@@ -80,14 +84,13 @@ public class EarthquakeCityMap extends PApplet {
 	    // to create a new SimplePointMarker for each PointFeature in 
 	    // earthquakes.  Then add each new SimplePointMarker to the 
 	    // List markers (so that it will be added to the map in the line below)
-	    List<PointFeature> bigEqs = new ArrayList<>();
-	    for (PointFeature bigEq : bigEqs) {
-	    	markers.add(new SimplePointMarker(bigEq.getLocation(), bigEq.getProperties()));
+	    for (PointFeature eq : earthquakes) {
+	    	markers.add(createMarker(eq));
 		}
 	    // Add the markers to the map so that they are displayed
 	    map.addMarkers(markers);
 	}
-		
+
 	/* createMarker: A suggested helper method that takes in an earthquake 
 	 * feature and returns a SimplePointMarker for that earthquake
 	 * 
@@ -111,9 +114,7 @@ public class EarthquakeCityMap extends PApplet {
 		float mag = Float.parseFloat(magObj.toString());
 		
 		// Here is an example of how to use Processing's color method to generate 
-	    // an int that represents the color yellow.  
-	    int yellow = color(255, 255, 0);
-		
+	    // an int that represents the color yellow.
 		// TODO (Step 4): Add code below to style the marker's size and color 
 	    // according to the magnitude of the earthquake.  
 	    // Don't forget about the constants THRESHOLD_MODERATE and 
@@ -121,8 +122,18 @@ public class EarthquakeCityMap extends PApplet {
 	    // Rather than comparing the magnitude to a number directly, compare 
 	    // the magnitude to these variables (and change their value in the code 
 	    // above if you want to change what you mean by "moderate" and "light")
-	    
-	    
+	    if (mag > THRESHOLD_MODERATE) {
+	        marker.setRadius(15);
+	        marker.setColor(red);
+        }
+        else if (mag > THRESHOLD_LIGHT) {
+            marker.setRadius(10);
+            marker.setColor(yellow);
+        }
+        else {
+            marker.setRadius(5);
+            marker.setColor(blue);
+        }
 	    // Finally return the marker
 	    return marker;
 	}
@@ -137,8 +148,23 @@ public class EarthquakeCityMap extends PApplet {
 	// helper method to draw key in GUI
 	// TODO: Implement this method to draw the key
 	private void addKey() 
-	{	
+	{
+        int backgroundColor = color(249, 247, 232);
+        int textColor = color(0,0,0);
 		// Remember you can use Processing's graphics methods here
-	
-	}
+        fill(backgroundColor);
+        rect(25, 50,150, 250);
+        fill(textColor);
+        textAlign(LEFT);
+        text("Legend", 70, 75);
+        text("5.0+ Magnitude", 70, 125);
+        text("4.0+ Magnitude", 70, 175);
+        text("Below 4.0", 70, 225);
+        fill(red);
+        ellipse(50, 120, 15, 15);
+        fill(yellow);
+        ellipse(50, 170, 10, 10);
+        fill(blue);
+        ellipse(50, 220, 5, 5);
+    }
 }

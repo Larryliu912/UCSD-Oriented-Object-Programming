@@ -1,0 +1,426 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GlueGenVersion<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.jogamp.common.GlueGenVersion",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-NativeWindowVersion<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.jogamp.nativewindow.NativeWindowVersion",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-NewtVersion<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.jogamp.newt.NewtVersion",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GLWindow<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.jogamp.newt.opengl.GLWindow",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MainThread<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.jogamp.newt.util.MainThread",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-VersionApplet3<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.jogamp.newt.util.applet.VersionApplet3",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-JoglVersion<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.jogamp.opengl.JoglVersion",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GLCanvas<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.jogamp.opengl.swt.GLCanvas",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CompileShaderNVidia<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "com.jogamp.opengl.util.glsl.sdk.CompileShaderNVidia",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LocationTester<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "demos.LocationTester",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MyPApplet<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "demos.MyPApplet",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SearchAndSort<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "demos.SearchAndSort",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Student<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "demos.Student",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-GLCanvas<UCSDUnfoldingMaps>(1)",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "javax.media.opengl.awt.GLCanvas",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ResourceFile<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "jogamp.graph.font.typecast.ot.mac.ResourceFile",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LinuxEventDeviceTracker<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "jogamp.newt.driver.linux.LinuxEventDeviceTracker",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-VersionApplet<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "jogamp.opengl.awt.VersionApplet",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Type_Widget<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "jogamp.opengl.glu.mipmap.Type_Widget",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ALDummyUsage<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "jogamp.opengl.openal.av.ALDummyUsage",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PngDeinterlacer<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "jogamp.opengl.util.pngj.PngDeinterlacer",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.log4j.chainsaw.Main",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PropertyPrinter<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.log4j.config.PropertyPrinter",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LF5Appender<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.log4j.lf5.LF5Appender",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StartLogFactor5<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.log4j.lf5.StartLogFactor5",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-JMSSink<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.log4j.net.JMSSink",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SimpleSocketServer<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.log4j.net.SimpleSocketServer",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SocketServer<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.log4j.net.SocketServer",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Roller<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.apache.log4j.varia.Roller",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Compiler<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.ibex.nestedvm.Compiler",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Interpreter<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.ibex.nestedvm.Interpreter",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-RuntimeCompiler<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.ibex.nestedvm.RuntimeCompiler",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-OSInfo<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.sqlite.OSInfo",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SQLite<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "org.sqlite.SQLite",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PApplet<UCSDUnfoldingMaps>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "processing.core.PApplet",
+            "args": "",
+            "projectName": "UCSDUnfoldingMaps"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Attach)",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": "<debug port of remote debuggee>"
+        }
+    ]
+}
