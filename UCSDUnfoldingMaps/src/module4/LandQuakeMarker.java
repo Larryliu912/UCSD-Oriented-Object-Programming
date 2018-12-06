@@ -13,7 +13,7 @@ public class LandQuakeMarker extends EarthquakeMarker {
 	
 	
 	public LandQuakeMarker(PointFeature quake) {
-		
+
 		// calling EarthquakeMarker constructor
 		super(quake);
 		
@@ -33,7 +33,9 @@ public class LandQuakeMarker extends EarthquakeMarker {
 		// and how it is set in the EarthquakeMarker constructor
 		
 		// TODO: Implement this method
-		
+		pg.pushStyle();
+		pg.ellipse(x, y, this.getRadius(), this.getRadius());
+		pg.popStyle();
 	}
 	
 

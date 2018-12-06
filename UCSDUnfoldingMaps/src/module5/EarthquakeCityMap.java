@@ -8,6 +8,7 @@ import de.fhpotsdam.unfolding.data.Feature;
 import de.fhpotsdam.unfolding.data.GeoJSONReader;
 import de.fhpotsdam.unfolding.data.PointFeature;
 import de.fhpotsdam.unfolding.geo.Location;
+import de.fhpotsdam.unfolding.marker.AbstractMarker;
 import de.fhpotsdam.unfolding.marker.AbstractShapeMarker;
 import de.fhpotsdam.unfolding.marker.Marker;
 import de.fhpotsdam.unfolding.marker.MultiMarker;
@@ -131,9 +132,8 @@ public class EarthquakeCityMap extends PApplet {
 	{
 		// clear the last selection
 		if (lastSelected != null) {
-			lastSelected.setSelected(false);
+		    lastSelected.setSelected(false);
 			lastSelected = null;
-		
 		}
 		selectMarkerIfHover(quakeMarkers);
 		selectMarkerIfHover(cityMarkers);
@@ -146,6 +146,16 @@ public class EarthquakeCityMap extends PApplet {
 	private void selectMarkerIfHover(List<Marker> markers)
 	{
 		// TODO: Implement this method
+        if (lastSelected != null) {
+            return;
+        }
+		for (Marker marker : markers) {
+			if (marker.isInside(map, mouseX, mouseY)) {
+                lastSelected = (CommonMarker) marker;
+                marker.setSelected(true);
+				return;
+			}
+		}
 	}
 	
 	/** The event handler for mouse clicks
@@ -159,7 +169,54 @@ public class EarthquakeCityMap extends PApplet {
 		// TODO: Implement this method
 		// Hint: You probably want a helper method or two to keep this code
 		// from getting too long/disorganized
+		if (lastClicked != null) {
+			lastClicked = null;
+			unhideMarkers();
+		}
+		else {
+            selectMarkerIfClick(quakeMarkers);
+            if (lastClicked == null) {
+                selectMarkerIfClick(cityMarkers);
+            }
+        }
 	}
+
+	private void selectMarkerIfClick(List<Marker> markers) {
+	    if (lastClicked != null) {
+	        return;
+        }
+	    for (Marker marker : markers) {
+	        if (!marker.isHidden() && marker.isInside(map, mouseX, mouseY)) {
+	            lastClicked = (CommonMarker) marker;
+                hideSameTypeMarkers(markers);
+	            return;
+            }
+        }
+    }
+
+    private void hideSameTypeMarkers(List<Marker> markers) {
+	    for (Marker m : markers) {
+	        if (m != lastClicked) {
+	            m.setHidden(true);
+            }
+        }
+        if (markers == quakeMarkers) {
+            for (Marker m : cityMarkers) {
+                if (m.getDistanceTo(lastClicked.getLocation()) > ((EarthquakeMarker) lastClicked).threatCircle()) {
+                    m.setHidden(true);
+                }
+            }
+        }
+        else{
+            for (Marker m : quakeMarkers) {
+                if (m.getDistanceTo(lastClicked.getLocation()) > ((EarthquakeMarker) m).threatCircle()) {
+                    m.setHidden(true);
+                }
+            }
+        }
+    }
+
+
 	
 	
 	// loop over and unhide all markers
