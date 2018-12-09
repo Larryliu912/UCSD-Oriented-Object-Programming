@@ -28,6 +28,7 @@ public abstract class EarthquakeMarker extends CommonMarker
 	/** Greater than or equal to this threshold is a moderate earthquake */
 	public static final float THRESHOLD_MODERATE = 5;
 	/** Greater than or equal to this threshold is a light earthquake */
+	/** Greater than or equal to this threshold is a light earthquake */
 	public static final float THRESHOLD_LIGHT = 4;
 
 	/** Greater than or equal to this threshold is an intermediate depth */
